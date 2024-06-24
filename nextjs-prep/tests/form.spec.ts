@@ -48,9 +48,10 @@ test("empty email", async ({ page }) => {
 
   await page.click('button[type="submit"]'); // Click submit with empty fields
 
-  const isEmailFocused = await page.evaluate(
-    () => document.activeElement.id === "email"
-  );
+  const isEmailFocused = await page.evaluate(() => {
+    const activeElement = document.activeElement as HTMLInputElement; // Type assertion
+    return activeElement.id === "email";
+  });
   expect(isEmailFocused).toBeTruthy();
 });
 
@@ -60,8 +61,9 @@ test("empty age", async ({ page }) => {
 
   await page.click('button[type="submit"]'); // Click submit with empty fields
 
-  const isAgeFocused = await page.evaluate(
-    () => document.activeElement.id === "age"
-  );
+  const isAgeFocused = await page.evaluate(() => {
+    const activeElement = document.activeElement as HTMLInputElement; // Type assertion
+    return activeElement.id === "age";
+  });
   expect(isAgeFocused).toBeTruthy();
 });

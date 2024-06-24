@@ -50,9 +50,10 @@ test("empty username", async ({ page }) => {
 
   // Check if the first input (username) is focused
   // This indicates that the browser's validation is prompting the user to fill out this field
-  const isUsernameFocused = await page.evaluate(
-    () => document.activeElement.id === "username"
-  );
+  const isUsernameFocused = await page.evaluate(() => {
+    const activeElement = document.activeElement as HTMLInputElement; // Type assertion
+    return activeElement.id === "username";
+  });
   expect(isUsernameFocused).toBeTruthy();
 });
 
@@ -62,8 +63,9 @@ test("empty password", async ({ page }) => {
 
   await page.click('button[type="submit"]'); // Click submit with empty fields
 
-  const isPasswordFocused = await page.evaluate(
-    () => document.activeElement.id === "password"
-  );
+  const isPasswordFocused = await page.evaluate(() => {
+    const activeElement = document.activeElement as HTMLInputElement; // Type assertion
+    return activeElement.id === "password";
+  });
   expect(isPasswordFocused).toBeTruthy();
 });
