@@ -7,9 +7,14 @@ pipeline {
                     url: 'https://github.com/sousa16/internship-prep' 
             }
         }
+        stage('Install Correct Node Version') {
+            steps {
+                sh 'nvm install 22.0.0' 
+            }
+        }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install 22.0.0' 
+                sh 'npm install'
             }
         }
         stage('Build Next.js App') {
