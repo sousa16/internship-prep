@@ -1,5 +1,3 @@
-import Form from "@/app/ui/form";
-
 export default function FormPage() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
@@ -22,9 +20,7 @@ export default function FormPage() {
         </a>
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-[400px] flex-col space-y-2.5 p-4 md:-mt-32">
-        <Form />
-      </div>
+      <div className="relative mx-auto flex w-full max-w-[400px] flex-col space-y-2.5 p-4 md:-mt-32"></div>
     </main>
   );
 }
