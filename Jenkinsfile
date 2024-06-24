@@ -9,18 +9,18 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install' // Or 'yarn install' depending on your package manager
+                sh 'npm install 22.0.0' 
             }
         }
         stage('Build Next.js App') {
             steps {
-                sh 'npm run build' // Or 'yarn build'
+                sh 'npm run build'
             }
         }
         stage('Run Playwright Tests') {
             steps {
                 script {
-                    sh 'npx playwright test' // Or 'npm run test:playwright' if you have a custom script
+                    sh 'npx playwright test'
                 }
             }
         }
