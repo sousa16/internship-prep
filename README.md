@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+For this project, I am using Jenkins to automatically run tests at every commit to the master branch. 
+In order to achieve this, I had to create a webhook in my repository.
+For that purpose, I have used ngronk locally to make my Jenkins page public. It also needs the project to be running locally.
+The repository webhook is configured using a specific address, which needs to be changed at each ngronk run.
+However, as this is only a learning project, I will not make the adjustment for Jenkins to be available on a persistent server.
+
 ## Running
 
 First, run the development server:
