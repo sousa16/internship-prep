@@ -6,6 +6,9 @@ For that purpose, I have used ngronk locally to make my Jenkins page public. It 
 The repository webhook is configured using a specific address, which needs to be changed at each ngronk run.
 However, as this is only a learning project, I will not make the adjustment for Jenkins to be available on a persistent server.
 
+FINAL COMMIT: Jenkins automatically ran the Playwright tests when I made my last commit.
+So, this project is finished, as everything is working as intended.
+
 ## Running
 
 First, run the development server:
